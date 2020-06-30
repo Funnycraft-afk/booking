@@ -1,0 +1,37 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $muli;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.main-link {
+    background-color: $red;
+    color: #fff;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $hover-red;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.content {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+}
