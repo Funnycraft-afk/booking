@@ -181,9 +181,10 @@
         display: flex;
         justify-content: space-between;
         font-size: 15px;
-        // font-weight: 700;
         font-weight: bold;
         font-family: $muli;
+        color: #333333;
+
 
     }
 
@@ -206,11 +207,21 @@
 
 }
 
+.features-content-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+}
+
 .features-content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: min-content, minmax(min-content, max-content);
-    grid-gap: 30px;
+    // display: grid;
+    // grid-template-columns: 1fr, 1fr;
+    // grid-template-rows: max-content, max-content;
+    // grid-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .features-content-card {
@@ -223,22 +234,26 @@
     height: 50px;
     padding-top: 15px;
     padding-left: 25px;
+    border-radius: 4px 4px 0 0;
+
 }
 
 .card-left {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    // grid-column: 1 / 2;
+    // grid-row: 1 / 2;
 }
 
 .card-right {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    // grid-column: 2 / 3;
+    // grid-row: 1 / 2;
 
 }
 
 .card-large {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
+    // grid-column: 1 / 3;
+    // grid-row: 2 / 3;
+    width: 100%;
+    margin-top: 30px;
 
     .card-group-title {
         color: $red;
@@ -247,7 +262,7 @@
         margin-bottom: 20px;
     }
     .card-info {
-        height: 500px;
+        // height: 500px;
         padding: 35px 35px 0 25px;
         
     }
@@ -268,7 +283,7 @@
     .card-group-element {
         font-size: 12px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
         margin-left: 40px;
     
         &::before {
@@ -284,20 +299,44 @@
 
 
 .card-small {
+    width: 100%;
+    max-width: 535px;
 
-    .card-info {
-        height: 150px;
-        padding: 25px 15px 0 25px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    @media (max-width: 1050px) {
+        max-width: none;
+
     }
 
-    .card-element {
+    .card-info {
+        padding: 25px 20px 0 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+
+    .card-valid {
+        font-size: 10px;
+        margin-left: 40px;
+    }
+
+    .card-date {
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+    .card-group-element {
         font-size: 12px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
         margin-left: 40px;
+        
 
         &::before {
             position: absolute;
