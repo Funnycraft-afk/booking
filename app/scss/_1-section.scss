@@ -15,7 +15,7 @@
 
 .hotel {
     padding-top: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 55px;
 
     &-title {
         color: #333333;
@@ -122,7 +122,7 @@
 
                     &::before {
                         position: absolute;
-                        content: url(../img/home.png);
+                        content: url(../img/room.png);
                         left: 0;
                     }
 
@@ -170,7 +170,7 @@
 }
 
 .hotel-features {
-    padding: 65px 0;
+    padding-top: 65px;
 
 
     &-menu {

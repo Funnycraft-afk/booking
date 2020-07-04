@@ -37,6 +37,27 @@ img {
 
 .content {
     position: relative;
-    max-width: 1100px;
+    max-width: 1110px;
     margin: auto;
+}
+
+// Большая маленькая кнопки бронирования отеля
+
+.book-btn-large {
+    padding: 12px 25px;
+    background-color: $red;
+    border: none;
+    border-radius: 4px;
+    font-family: $nuni;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-red;
+    }
+}
+
+.book-btn-small {
+
 }
