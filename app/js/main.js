@@ -20,3 +20,13 @@ tabsName.forEach((tab) => {
         onTabClick(event.target.parentElement.id, event.target.dataset.featuresMenuName)
     })
 })
+
+// Слайдер отзывов
+let mySwiper = new Swiper('.swiper-container', {
+    speed: 400,
+    loop: true,
+    navigation: {
+        nextEl: '.slide-info-right-btn',
+        prevEl: '.slide-info-left-btn',
+      },
+});
