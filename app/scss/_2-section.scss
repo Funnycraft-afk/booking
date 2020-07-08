@@ -1,6 +1,5 @@
-.other-package {
-    padding-top: 55px;
-    padding-bottom: 500px;
+.package {
+    padding: 55px 0;
     color: #ffffff;
 
 
@@ -17,8 +16,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        border: 1px solid #000;
         width: 100%;
+
+        
        
 
         h3 {
@@ -43,6 +43,11 @@
         margin-bottom: 30px;
         display: flex;
         overflow: hidden;
+        position: relative;
+
+        // @media (max-width: 1080px) {
+        //     align-self: center;
+        // }
         
         .content-img {
             flex-basis: 50%;
@@ -63,6 +68,22 @@
         .content-info-cost {
             margin-top: auto;
         }
+
+        &.flash-offer {
+            &::before {
+            position: absolute;
+            content: 'Flash Offer';
+            font-size: 12px;
+            width: 95px;
+            height: 30px;
+            left: 0;
+            top: 25px;
+            background: $red;
+            padding-top: 8px;
+            padding-left: 15px;
+            border-radius: 0 4px 4px 0;
+            }
+        }
     }
 
     &-content-secondary {
@@ -72,6 +93,7 @@
         overflow: hidden;
         margin-bottom: 30px;
         max-width: 350px;
+        position: relative;
 
 
         .content-img {
@@ -86,12 +108,26 @@
             background-color: $blue;
             display: flex;
             flex-direction: column;
-            // flex-basis: 250px;
-            // height: 250px;
         }
 
         .content-info-cost {
             margin-top: 30px;
+        }
+
+        &.flash-offer {
+            &::before {
+            position: absolute;
+            content: 'Flash Offer';
+            font-size: 8px;
+            width: 60px;
+            height: 20px;
+            left: 0;
+            top: 25px;
+            background: $red;
+            padding-top: 6px;
+            padding-left: 10px;
+            border-radius: 0 4px 4px 0;
+            }
         }
     }
 }

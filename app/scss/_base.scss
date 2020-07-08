@@ -39,6 +39,11 @@ img {
     position: relative;
     max-width: 1110px;
     margin: auto;
+
+    // @media (max-width: 1080px) {
+    //     max-width: 900px;
+    //     border: 1px solid #000;
+    // }
 }
 
 // Большая и маленькая кнопки бронирования отеля
@@ -60,4 +65,14 @@ img {
 
 .book-btn-small {
 
+}
+
+// Большая и маленькая наклейки flash offer 
+
+.flash-offer-label-small {
+
+}
+
+.flash-offer-label-large {
+    
 }
