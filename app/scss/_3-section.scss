@@ -1,39 +1,48 @@
 .about {
     padding-top: 55px;
-    padding-bottom: 500px;
+    padding-bottom: 35px;
 
     h2 {
         font-size: 36px;
         text-transform: uppercase;
         text-align: center;
+        margin-top: 0;
         margin-bottom: 70px;
     }
 
     .slide-info {
         position: relative;
         max-width: 730px;
-        background: #ffffff;
         margin: 0 auto;
-        border-radius: 8px;
         margin-top: 50px;
+        padding-top: 55px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        background: #ffffff;
 
 
+        
         &-photo {
             position: absolute;
             left: calc(50% - 45px);
             top: -45px;
-            // z-index: 20;
+            width: 90px;
+            height: 90px;
+            
         }
 
-        &-wrapper {
-            max-width: 540px;
-            margin: 0 auto;
-            padding-top: 55px;
-            padding-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        // &-wrapper {
+        //     max-width: 540px;
+        //     margin: 0 auto;
+        //     padding-top: 55px;
+        //     padding-bottom: 30px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
 
         &-name {
             color: $red;
@@ -47,6 +56,7 @@
         }
 
         &-content {
+            max-width: 540px;
             margin: 0;
             margin-top: 40px;
             font-size: 12px;
@@ -54,15 +64,13 @@
             text-align: justify;
         }
 
-        &-rating {
-
-        }
+        &-rating {}
 
     }
 
     .swiper-container {
-        
-    
+
+
         .slide-info-left-btn {
             position: absolute;
             top: 50%;
@@ -70,7 +78,7 @@
             cursor: pointer;
             z-index: 1;
         }
-        
+
         .slide-info-right-btn {
             position: absolute;
             top: 50%;
@@ -80,4 +88,3 @@
         }
     }
 }
-
