@@ -48,31 +48,36 @@ img {
 
 // Большая и маленькая кнопки бронирования отеля
 
-.book-btn-large {
-    padding: 12px 25px;
+.book-btn {
     background-color: $red;
     border: none;
     border-radius: 4px;
     font-family: $nuni;
-    font-size: 14px;
     color: #ffffff;
     cursor: pointer;
 
     &:hover {
         background-color: $hover-red;
     }
+
+}
+
+.book-btn-large {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+
 }
 
 .book-btn-small {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
 
 }
 
 // Большая и маленькая наклейки flash offer 
 
-.flash-offer-label-small {
+// .flash-offer-label-small {}
 
-}
-
-.flash-offer-label-large {
-    
-}
+// .flash-offer-label-large {}
