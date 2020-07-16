@@ -13,6 +13,7 @@
     &-wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &-card {
@@ -27,21 +28,21 @@
         flex-direction: column;
         justify-content: flex-end;
 
-        &__1 {
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-1.png) no-repeat 100%;
-        }
+        // &__1 {
+        //     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-1.png) no-repeat 100%;
+        // }
 
-        &__2 {
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-2.png) no-repeat 100%;
-        }
+        // &__2 {
+        //     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-2.png) no-repeat 100%;
+        // }
 
-        &__3 {
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-3.png) no-repeat 100%;
-        }
+        // &__3 {
+        //     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-3.png) no-repeat 100%;
+        // }
 
-        &__4 {
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-4.png) no-repeat 100%;
-        }
+        // &__4 {
+        //     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 35%, #0A223D 100%), url(../img/card-4.png) no-repeat 100%;
+        // }
 
         h4 {
             font-size: 16px;
