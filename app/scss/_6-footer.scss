@@ -2,4 +2,66 @@
     padding-top: 100px;
     padding-bottom: 45px;
     background-color: $blue;
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+
+    &-nav-logo {
+        align-self: center;
+        // margin-right: 100px;
+
+        img {
+            width: 100%;
+        }
+    }
+    &-nav-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    &-nav-socials {
+        margin-top: 20px;
+        width: 290px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-nav-title {
+            margin-bottom: 0;
+            margin-right: 25px;
+        }
+    }
+
+    &-nav-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+
+        
+    }
+
+    &-nav-link {
+        color: $gray;
+        font-size: 14px;
+        line-height: 23px;
+
+        &:hover {
+            color: $hover-gray;
+        }
+    }
+
+    // Секция контакты
+
+    &-contact {
+        padding-top: 50px;
+    }
 }
