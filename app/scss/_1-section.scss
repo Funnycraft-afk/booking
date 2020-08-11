@@ -28,6 +28,11 @@
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
+
+        &__content-wrapper {
+            position: relative;
+            border: 1px solid #000;
+        }
         
 
         h2 {
@@ -36,27 +41,37 @@
             font-weight: bold;
             font-size: 24px;
             text-transform: uppercase;
-            position: relative;
-            max-width: 290px;
+
+            @media screen and (max-width: 650px) {
+                font-size: 20px;
+            }
+
         }
 
         &.flash-offer {
 
-            h2::after {
+            .hotel-title__content-wrapper::after {
                 position: absolute;
                 content: "Flash Offer";
                 background: $red;
                 padding-top: 4px;
                 width: 70px;
                 height: 20px;
-                right: -70px;
-                top: 4px;
+                right: -75px;
+                top: calc(50% - 10px);
                 border-radius: 3px;
                 font-size: 10px;
                 color: #ffffff;
                 text-transform: none;
                 font-weight: bold;
                 text-align: center;
+
+                @media screen and (max-width: 650px) {
+                    left: 100px;
+                    top: 0;
+                    padding-top: 3px;
+                    height: 15px;
+                }
                 
             }
         }
@@ -90,11 +105,15 @@
                 font-size: 14px;
             }
         }
+
+        @media screen and (max-width: 650px) {
+            display: none;
+
+        }
     }
 
     &-info {
         display: grid;
-        // grid-template-columns: minmax(500px, 730px) minmax(200px, 350px);
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
@@ -103,6 +122,10 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: min-content 1fr;
             grid-gap: 10px;
+        }
+
+        @media screen and (max-width: 650px) {
+            grid-template-rows: min-content 1fr 1fr;
         }
 
         &-image {
@@ -135,6 +158,12 @@
             @media screen and (max-width: 1024px) {
                 grid-column: 1 / 2;
                 grid-row: 2 / 3;
+            }
+
+            @media screen and (max-width: 650px) {
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                padding: 15px;
             }
 
 
@@ -243,6 +272,11 @@
             @media screen and (max-width: 1024px) {
                 grid-column: 2 / 3;
                 grid-row: 2 / 3;
+            }
+
+            @media screen and (max-width: 650px) {
+                grid-column: 1 / 3;
+                grid-row: 3 / 4;
             }
         }
     }
