@@ -1,3 +1,12 @@
+// Мобильное меню 
+
+const mobileBtn = document.querySelector('.mobile-menu-btn')
+const mobileMenu = document.querySelector('.mobile')
+mobileBtn.addEventListener('click', () => {
+    mobileBtn.classList.toggle('active')
+    mobileMenu.classList.toggle('active')
+})
+
 // Табы
 
 const onTabClick = function(idContainer, idElement) {
