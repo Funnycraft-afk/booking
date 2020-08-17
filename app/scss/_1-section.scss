@@ -1,7 +1,7 @@
 .crumbs {
-    height: 50px;
+    height: 30px;
     padding: 15px 0;
-    
+
 
     &-link,
     &-slash {
@@ -14,6 +14,14 @@
         text-decoration: underline;
     }
 
+    .content {
+
+        @media screen and (max-width: 1024px) {
+            max-width: 770px;
+        }
+    
+    }
+
 }
 
 .hotel {
@@ -23,7 +31,7 @@
     .content {
 
         @media screen and (max-width: 1024px) {
-        max-width: 770px;
+            max-width: 770px;
         }
     }
 
@@ -32,19 +40,18 @@
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
-
-        &__content-wrapper {
-            position: relative;
-            border: 1px solid #000;
-        }
-        
+        flex-direction: column;
+        align-items: start;
+        position: relative;
 
         h2 {
-            margin: 0;
+            margin: 10px 0;
             font-family: $muli;
             font-weight: bold;
             font-size: 24px;
             text-transform: uppercase;
+            position: relative;
+            display: inline-block;
 
             @media screen and (max-width: 650px) {
                 font-size: 20px;
@@ -54,14 +61,14 @@
 
         &.flash-offer {
 
-            .hotel-title__content-wrapper::after {
+            h2::after {
                 position: absolute;
                 content: "Flash Offer";
                 background: $red;
-                padding-top: 4px;
+                padding-top: 5px;
                 width: 70px;
                 height: 20px;
-                right: -75px;
+                right: -90px;
                 top: calc(50% - 10px);
                 border-radius: 3px;
                 font-size: 10px;
@@ -71,12 +78,30 @@
                 text-align: center;
 
                 @media screen and (max-width: 650px) {
-                    left: 100px;
-                    top: 0;
-                    padding-top: 3px;
-                    height: 15px;
+                    display: none;
                 }
-                
+
+            }
+
+            &::after {
+
+                @media screen and (max-width: 650px) {
+                    position: absolute;
+                    content: "Flash Offer";
+                    background: $red;
+                    padding-top: 5px;
+                    width: 70px;
+                    height: 20px;
+                    left: 210px;
+                    top: 0;
+                    border-radius: 3px;
+                    font-size: 10px;
+                    color: #ffffff;
+                    text-transform: none;
+                    font-weight: bold;
+                    text-align: center;
+    
+                }
             }
         }
 
@@ -88,21 +113,27 @@
     }
 
     &-title-rating {
-        width: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
         height: 45px;
         background-color: $red;
-        text-align: center;
         color: #ffffff;
         border-radius: 4px;
-        align-self: center;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 25px);
+        
 
         span {
-            font-size: 8px;
+            font-size: 11px;
             font-weight: 400;
+            margin: 2px 3px;
         }
 
         .rate {
-            font-size: 10px;
             font-weight: bold;
 
             b {
@@ -111,8 +142,11 @@
         }
 
         @media screen and (max-width: 650px) {
-            display: none;
-
+            width: 125px;
+            height: 20px;
+            flex-direction: row;
+            left: 70px;
+            top: 0;
         }
     }
 
@@ -138,7 +172,7 @@
             border-radius: 8px;
 
             @media screen and (max-width: 1024px) {
-                 grid-row: 1 / 2;
+                grid-row: 1 / 2;
             }
 
             img {
@@ -285,136 +319,6 @@
         }
     }
 
-  /*  &-info {
-        display: grid;
-        grid-template-columns: minmax(500px, 730px) minmax(200px, 350px);
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 30px;
-
-        &-image {
-            grid-column: 1;
-            grid-row: 1 / -1;
-            border-radius: 8px;
-
-        }
-
-        &-card {
-            grid-column: 2;
-            grid-row: 1 / 2;
-            padding: 25px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            font-family: $nuni;
-            background-color: $blue;
-            color: #ffffff;
-            border-radius: 8px;
-
-
-            &_content-left {
-
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-
-                .before-price {
-                    font-size: 10px;
-                }
-
-                .after-price {
-                    font-size: 12px;
-                }
-
-                .price {
-                    font-weight: 800;
-                    font-size: 24px;
-                    margin: 5px 0;
-                }
-
-                .quick-booking {
-                    margin-top: 10px;
-                    font-weight: 600;
-                    font-size: 18px;
-                }
-            }
-
-            &_content-right {
-                width: 80px;
-                display: flex;
-                flex-direction: column;
-
-
-                .option-guest {
-                    font-size: 12px;
-                    margin-top: 10px;
-                    position: relative;
-                    width: 100%;
-                    text-align: right;
-
-                    &::before {
-                        position: absolute;
-                        content: url(../img/guest.png);
-                        left: 0;
-                    }
-
-                }
-
-                .option-room {
-                    font-size: 12px;
-                    margin-top: 10px;
-                    position: relative;
-                    width: 100%;
-                    text-align: right;
-
-
-                    &::before {
-                        position: absolute;
-                        content: url(../img/room.png);
-                        left: 0;
-                    }
-
-                }
-
-                .phone-number {
-                    font-weight: 600;
-                    font-size: 18px;
-                    position: relative;
-                    width: 100%;
-                    text-align: right;
-                    margin-top: 25px;
-
-
-                    &::before {
-                        position: absolute;
-                        content: url(../img/phone.png);
-                        left: 0;
-                    }
-                }
-            }
-
-            &_view-more {
-                width: 100%;
-                height: 45px;
-                padding: 13px;
-                text-align: center;
-                align-self: flex-end;
-                margin-top: 10px;
-            }
-
-        }
-
-        &-map {
-            grid-column: 2;
-            grid-row: 2 / -1;
-            border-radius: 8px;
-
-            iframe {
-                border-radius: 8px;
-                border: 0;
-            }
-        }
-    } */
 }
 
 .hotel-features {
@@ -463,7 +367,7 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #333333;
-    
+
 }
 
 .features-content-name {
@@ -491,7 +395,7 @@
 }
 
 .card-large {
-    
+
 
     width: 100%;
     margin-top: 30px;
@@ -502,19 +406,18 @@
         font-weight: 600;
         margin-bottom: 20px;
     }
+
     .card-info {
         padding: 35px 0 0 25px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
     }
 
-    .main-part{
-        
-    }
+    .main-part {}
 
-    
+
     .card-group {
         display: flex;
         flex-direction: column;
@@ -522,22 +425,22 @@
         margin-bottom: 40px;
 
     }
-    
+
 
     .card-group-element {
         font-size: 12px;
         position: relative;
         margin-bottom: 22px;
         margin-left: 40px;
-    
+
         &::before {
             position: absolute;
             content: url(../img/check.png);
             left: -35px;
             top: -3px;
         }
-    
-        
+
+
     }
 }
 
@@ -556,7 +459,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
     }
 
     .card-group {
@@ -589,7 +492,7 @@
         position: relative;
         margin-bottom: 22px;
         margin-left: 40px;
-        
+
 
         &::before {
             position: absolute;
@@ -597,9 +500,7 @@
             left: -35px;
             top: -3px;
         }
-    
-        
+
+
     }
 }
-
-

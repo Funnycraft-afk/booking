@@ -213,15 +213,21 @@
         padding: 20px;
         position: absolute;
         right: 20px;
-        bottom: -208px;
+        bottom: -200px;
         background-color: rgba(10, 34, 61, .95);
         border-radius: 5px;
         border: 2px solid #EC1F46;
         width: 370px;
-        height: 220px;
+        height: 210px;
+
+        
 
         &.active {
             display: flex;
+
+            @media screen and (min-width: 750px) {
+                display: none;
+            }
         }
 
         .main-nav-link {
